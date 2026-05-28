@@ -118,3 +118,39 @@ resource "azurerm\_windows\_virtual\_machine" "demovm" {
 
 
 
+
+
+
+
+Network Security Group (NSG)
+
+
+
+To allow remote access to the virtual machine, I created an Azure Network Security Group (NSG) with an inbound security rule for RDP traffic.
+
+
+
+The NSG was associated with the internal subnet where the VM is attached to. 
+
+NSG Rule Configuration
+
+Protocol: TCP
+
+Port: 3389
+
+Direction: Inbound
+
+Action: Allow
+
+Priority: 100
+
+
+
+
+
+Bastion
+
+
+
+
+
