@@ -130,7 +130,7 @@ To allow remote access to the virtual machine, I created an Azure Network Securi
 
 
 
-The NSG was associated with the internal subnet where the VM is attached to. 
+The NSG was associated with the internal subnet where the VM is attached to.
 
 NSG Rule Configuration
 
@@ -150,7 +150,15 @@ Priority: 100
 
 Bastion
 
+Azure Bastion protects the VMs by providing secure RDP and SSH connections without exposing them to the internet
 
+
+
+When creating a Bastion, you get two options:
+
+Deploy Bastion: This provides PAAS where Microsoft takes care of the infrastructure, scaling, OS updates etc. Done in a few clicks using preset defaults or specific requirements.
+
+Configure Manually: This is IAAS and you are responsible for the OS updates, security controls etc. Requires setting up an extra VM in a public subnet to act as a gateway, exposing that VM to the internet
 
 
 
