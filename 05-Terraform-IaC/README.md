@@ -144,6 +144,8 @@ resource "azurerm\_network\_interface" "terranicdemo" {
 
 
 
+\#Password stored securely using Terraform variables.
+
 resource "azurerm\_windows\_virtual\_machine" "demovm" {
 
 &#x20; name                = "testPC"
@@ -156,7 +158,7 @@ resource "azurerm\_windows\_virtual\_machine" "demovm" {
 
 &#x20; admin\_username      = "adminuser"
 
-&#x20; admin\_password      = "P@$$w0rd1234!"
+&#x20; admin\_password      = var.admin\_password
 
 &#x20; network\_interface\_ids = \[
 
@@ -189,8 +191,4 @@ resource "azurerm\_windows\_virtual\_machine" "demovm" {
 &#x20; }
 
 }
-
-
-
-
 
