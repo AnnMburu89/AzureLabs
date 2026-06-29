@@ -1,9 +1,19 @@
-terraform.tfvars
-
+# Terraform
 .terraform/
 
-terraform.tfstate
+# State
+*.tfstate
+*.tfstate.*
 
-terraform.tfstate.backup
+# Secrets
+terraform.tfvars
+*.auto.tfvars
 
-*.tfvars
+# Logs
+crash.log
+
+# Override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
