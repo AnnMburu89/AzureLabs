@@ -1,3 +1,25 @@
+Objective
+
+
+
+Deploy a VM using the Azure Portal and Terraform.
+
+
+
+Prerequisites
+
+Azure Subscription
+
+Azure CLI
+
+Terraform
+
+VS Code
+
+
+
+
+
 Azure Virtual Network(Vnet) is the foundational block for your private network in Azure. It provides a logical isolated secure environment where the Azure resources like Vms, Databases can connect to each other, internet or on premise network.
 
 
@@ -12,7 +34,7 @@ Azure Vnet can be subdivided into smaller networks (subnets) to segregate applic
 
 
 
-I created a VM named testPC using Terraform. The script is referencing some resources on main.tf
+
 
 
 
@@ -159,6 +181,4 @@ When creating a Bastion, you get two options:
 Deploy Bastion: This provides PAAS where Microsoft takes care of the infrastructure, scaling, OS updates etc. Done in a few clicks using preset defaults or specific requirements.
 
 Configure Manually: This is IAAS and you are responsible for the OS updates, security controls etc. Requires setting up an extra VM in a public subnet to act as a gateway, exposing that VM to the internet
-
-
 
