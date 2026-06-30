@@ -194,7 +194,79 @@ I also configured NIC for the VM. An Azure Virtual Machine doesn't connect direc
 
 
 
+Deploy the Virtual Machine
+
+Azure needs to know:
 
 
 
+Which Resource Group?
+
+Which Region?
+
+Which Network Interface?
+
+What VM Size?
+
+Which Operating System?
+
+Administrator Username?
+
+Administrator Password?
+
+Which Disk Type?
+
+
+
+
+
+
+
+A Windows Server 2019 Virtual Machine was deployed using Terraform and connected to the Azure Virtual Network through a Network Interface.
+
+
+
+
+
+\- VM Size: Standard\_B1s
+
+\- OS: Windows Server 2019 Datacenter
+
+\- Authentication: Username/Password
+
+\- Storage: Standard SSD (LRS)
+
+
+
+
+
+\## CI Pipeline (GitHub Actions)
+
+
+
+This project includes a GitHub Actions workflow that automatically validates the Terraform code whenever changes are pushed to the repository.
+
+
+
+\### Workflow
+
+
+
+Git Push
+
+&#x20;   ↓
+
+Checkout Repository
+
+&#x20;   ↓
+
+Terraform Init
+
+&#x20;   ↓
+
+Terraform Format Check
+
+&#x20;   ↓
+
+Terraform Validate
 
