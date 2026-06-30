@@ -94,7 +94,7 @@ Provision a secure Azure networking environment and deploy a Windows Virtual Mac
 
 terraform init -> Initializes a working directory containing Terraform configuration files. It is the absolute first command you must run after writing a new configuration or cloning an existing one from version control. Without running it, subsequent commands like terraform plan and terraform apply will fail.
 
-terraform fmt -> 
+terraform fmt ->
 
 terraform validate-> Verifies whether a directory's Terraform configuration files are syntactically valid and internally consistent. Catches missing brackets, commas, quotes, or typos in the HashiCorp Configuration Language (HCL) syntax.
 
@@ -181,6 +181,18 @@ The infrastructure was also validated using Terraform outputs.
 
 
 !\[Virtual Network](images/04-AzureVnet-Subnet.png)
+
+
+
+Created Network Security Group (NSG)
+
+NSG is used as the firewall where you can apply rules to block or allow access eg allow RDP on port 3389
+
+
+
+I also configured NIC for the VM. An Azure Virtual Machine doesn't connect directly to a Virtual Network because Azure uses a Network Interface (NIC) as the connection point between the VM and the network. The NIC is attached to the VM and connects it to a subnet within the Virtual Network. It also manages the VM's private IP address, can be associated with a Public IP, and is where network security policies can be applied. It's similar to a physical network card and Ethernet cable in a traditional computer.
+
+
 
 
 
